@@ -6,12 +6,79 @@
     <title>Document</title>
   </head>
   <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       background-color: #28282b;
       color: #fff;
+
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+
+      font-family: monospace;
+      font-weight: 800;
     }
+
+    .container,
+    .result {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    .result {
+      gap: 5rem;
+      font-size: 1.5rem;
+    }
+
+
+    .rock,
+    .paper,
+    .scissors {
+      border: 0;
+      border-radius: 0.5rem;
+      font-size: 5rem;
+      background-color: #171717;
+      padding: 2rem;
+      cursor: pointer;
+    }
+
+    .rock:hover,
+    .paper:hover,
+    .scissors:hover{
+      background-color: #242424;
+    }
+    
+    .visible {
+      visibility: hidden;
+    }
+
+    .winner {
+      color: green;
+    }
+
+    .loser {
+      color: red;
+    }
+
   </style>
   <body>
+    <h1 class="title">Rock Paper Scissors</h1>
+    <div class="container">
+      <button class="rock choice">✊</button>
+      <button class="paper choice">✋</button>
+      <button class="scissors choice">✌️</button>
+    </div>
+    <div class="result">
+      <p class="player-score visible">Score: 0</p>
+      <p class="computer-score visible">Score: 0</p>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
